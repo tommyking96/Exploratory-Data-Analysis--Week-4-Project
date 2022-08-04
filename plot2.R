@@ -23,7 +23,8 @@ table
 #Plotting and saving to png file
 
 png("plot2.png", height = 900, width = 1200)
-plot(levels(Baltimore$year), table, xlab = "Year", ylab = "Total PM2.5 emission in Baltimore")
+plot(levels(Baltimore$year), table, xlab = "Year", ylab = "Total PM2.5 emission in Baltimore", type = "b", pch = 20, ylim = c(1800, 3400))
+text(levels(NEI$year), table + 100, labels = c("1999", "2002", "2005", "2008"))
 dev.off()
 
 #Based on the plot, it seems like the total PM2.5 emission decreased over the years in Baltimore, but we have an unexpected spike in 2005, so the answer might not be so significant. 
